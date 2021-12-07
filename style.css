@@ -1,0 +1,131 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url(kepek/hatter.jpg);
+    width: 70%;
+    margin: auto;
+}
+
+main{
+    display: grid;
+    background-color: aliceblue;
+    grid-template-areas: "he he he he"
+                         "na ar as as"
+                         "na ar as as"
+                         "fo fo fo fo";
+    grid-template-columns: 250px 1fr 1fr 1fr;
+}
+
+header{
+    grid-area: he;
+    height: 150px;
+    background-image: url(kepek/fejlec.jpg);
+    text-align: center;
+    color: aliceblue;
+    font-size: xx-large;
+}
+header h3 {
+    padding-top: 40px;
+}
+nav{
+    grid-area: na;
+    margin-right: 20px;
+}
+ul{
+    padding: 4px;
+}
+li{
+    background-color: rgb(7, 118, 192);
+    margin: 1px;
+    padding: 8px;
+    text-align: center;
+    border: rgb(7, 118, 192) 3px solid;
+    border-radius: 15px;
+    list-style: none;
+    
+}
+nav ul li a {
+    color: aliceblue;
+    text-decoration: none;
+    
+}
+article{
+    grid-area: ar;
+}
+
+aside{
+    grid-area: as;
+
+    background-color: aliceblue;
+    height: 100%;
+    text-align: justify;
+    padding-right: 25px;
+    border-top: solid 1px rgb(192, 192, 192);
+    border-left: solid 1px rgb(192, 192, 192);
+}
+aside h4{
+    font-size: xx-large;
+    
+}
+aside div {
+    margin: 5px;
+}
+aside p {
+    font-size: larger;
+    margin: 2px;
+}
+footer{
+    grid-area: fo;
+    text-align: center;
+    background-color: rgb(7, 118, 192);
+}
+
+.div1{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 30px;
+    margin-bottom: 200px;
+}
+
+
+#polaroid1, #polaroid2 {
+    width: 250px;
+    padding: 10px 10px 40px 10px;
+    border: 1px solid #BFBFBF;
+    background-color: white;
+    box-shadow: 10px 10px 5px #aaaaaa;
+  }
+
+#polaroid1 {
+    float: left;
+    -ms-transform: rotate(7deg); /* IE 9 */
+    -webkit-transform: rotate(7deg); /* Safari */
+    transform: rotate(7deg);
+}
+
+#polaroid2 {
+    float: left;
+    -ms-transform: rotate(-8deg); /* IE 9 */
+    -webkit-transform: rotate(-8deg); /* Safari */
+    transform: rotate(-8deg);
+}
+
+@media screen and (max-width: 600px){
+    body{
+        width: 100%;
+
+    }
+    main {
+        grid-template-areas: "he"
+                             "na"
+                             "ar"
+                             "as"
+                             "fo";
+    }
+    .div1{
+        grid-template-columns: auto;
+    }
+    
+}

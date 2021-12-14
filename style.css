@@ -111,11 +111,30 @@ footer{
     -webkit-transform: rotate(-8deg); /* Safari */
     transform: rotate(-8deg);
 }
+table {
+    border-collapse: collapse;
+    font-size: large;
+    margin-top: 10px;
+}
+
+td, th{
+    
+    border-bottom: rgb(43, 99, 151) 2px solid;
+}
+tr:nth-child(odd){
+    background-color: rgb(98, 176, 240);
+}
 
 @media screen and (max-width: 600px){
     body{
-        width: 100%;
+        width: 70%;
 
+    }
+    nav {
+        margin-right:0px;
+    }
+    aside p{
+        margin:0px;
     }
     main {
         grid-template-areas: "he"
@@ -127,5 +146,9 @@ footer{
     .div1{
         grid-template-columns: auto;
     }
+    #polaroid1, #polaroid2 {
+        width: 200px;
+
+      }
     
 }
